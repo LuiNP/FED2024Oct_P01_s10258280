@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Wk 2: Simple box model</title>
+	<link href="style.css" rel="stylesheet" type="text/css" />
+	<style>
+		/* we use pixels as a basic unit of measure, you can use em, pt, % and so on */
+		div.special {
+			margin-top: 20px;
+			padding: 20px;
+			border: 1px solid green;
+			/* there's many different border properties */
+			background-color: gray;
+			color: white;
+		}
+
+		div {
+			border: 1px solid red;
+		}
+	</style>
+</head>
+
+<body>
+	<div>
+		Just a box meant to be above of everyone. notice there's no padding and margins around me
+	</div>
+	<div class="special">
+		Let's see how our box is like. Make it with a green border Let's padding with hmm.. 20px around Let's move it away from the
+		top box with a margin of 20px
+	</div>
+</body>
+
+</html>

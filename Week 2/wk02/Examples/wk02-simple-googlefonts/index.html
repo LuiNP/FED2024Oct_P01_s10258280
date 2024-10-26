@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Wk 2: Simple Google Fonts</title>
+	<link href="style.css" rel="stylesheet" type="text/css" />
+	<!-- import in google fonts -->
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Roboto:wght@300;400;500&display=swap"
+	 rel="stylesheet">
+
+
+	<style>
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
+			font-family: 'Montserrat', sans-serif;
+		}
+
+		p {
+			font-family: 'Roboto', sans-serif;
+		}
+
+		p.light {
+			font-weight: 300;
+		}
+	</style>
+</head>
+
+<body>
+	<h1>Montserrat is a great font to use for headings</h1>
+	<p>Roboto is pretty gd as a content font </p>
+	<p class="light">This is Roboto with light weight </p>
+
+	<!-- Let's attempt to make it super light -->
+	<p style="font-weight:100;">As we didn't load the lightest font, it won't appear so </p>
+	<!-- Let's attempt to make it super heavy, it will attempt but not load the correct weight-->
+	<p style="font-weight:900;">As we didn't load the lightest font, it won't appear so </p>
+
+  <a href="https://fonts.google.com/specimen/Montserrat?sidebar.open=true&selection.family=Montserrat:wght@300;400;500|Roboto:wght@300;400;500&category=Sans+Serif" target="_blank">Here's the font combo link, compare the font weights being used. </a>
+</body>
+
+</html>

@@ -1,0 +1,9 @@
+VScode >
+File >
+Preferences >
+settings >
+ copy paste into search:
+    liveServer.settings.CustomBrowse
+    >
+there's your browser live server settings
+    which browser is opened when live server tab is activated

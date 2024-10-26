@@ -1,0 +1,45 @@
+body{
+    background-color: #8e572e;
+    /*background-image: url("https://wallpaperaccess.com/full/1085380.jpg");
+    Background-repeat: no-repeat*/
+}
+
+h1, h2, h3{
+    color: #f2b409;
+}
+
+p, li{
+    color: #f6ff00;
+}
+
+.protein{
+    color: red;
+}
+/*if multiple following same thing(styling multiple elements), best to make a class. styling for them is with a dot .
+You can give an element multiple classes*/
+
+#drinks{
+    color:rgb(111, 201, 201)
+}
+/*ID for one singular item. takes precedence over class. can technically be used multiple times but best to keep it at one use. 
+styling for them is with a hastag #*/
+
+/* child elements explained below*/
+#intro p{
+    color: rgb(218, 105, 220);
+}
+/*any p elements under the tag with id intro will now be purple
+If not specified, all elements will be purple
+but specified p, so the h1 will remain in the standard styling*/
+
+/*padding now below*/
+#bacon-table{
+    margin-left: 50px;
+}
+
+#cruncy-bacon{
+    padding: 100px;
+}
+
+/* margin is distance between blocks, use when you're trying to separate/add distance to those
+padding is distance between elements within a block, used when separating those*/
