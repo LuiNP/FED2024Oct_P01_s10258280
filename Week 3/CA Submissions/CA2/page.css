@@ -1,0 +1,31 @@
+* {
+	box-sizing: border-box;
+}
+body {
+	color: #222;
+	font-family: 'Varela Round', sans-serif;
+	line-height: 1.5;
+	background: #e8e9e9;
+}
+h2 {
+	color: #122a68;
+	font-size: 1.6em;
+	margin-top: 1.85em;
+	margin-bottom: 0;
+}
+p {
+	margin-bottom: 0;
+	font-size: 15px;
+}
+.card {
+	width: 340px;
+	text-align: center;
+	margin: 80px auto 0;
+	padding: 1.5em;
+	background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 1.5px 0 0 rgba(0,0,0,0.1);
+}
+.logo {
+	width: 90px;
+}

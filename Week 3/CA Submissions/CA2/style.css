@@ -1,0 +1,36 @@
+/* Refer to READMe.MD for CA writeup
+/* Complete the challenge by writing CSS below */
+
+.logo{
+    position: absolute;
+    top: -45px; left: 125px;
+}
+
+.card{
+    position: relative;
+    top: 200px; left: 450px;
+    /*border-style: solid;
+    border-color: grey;
+    border-top-width: 45px;
+    border-left-width: 15px;
+    border-right-width: 15px;
+    border-bottom-width: 10px;
+    */
+
+}
+
+/*div{
+    border-style: solid;
+    border-color: grey;
+    border-top-width: 45px;
+    border-left-width: 15px;
+    border-right-width: 15px;
+    border-bottom-width: 10px;
+}
+*/
+
+
+
+/*1. Select the class logo and give it absolute positioning.
+2. Next, give .logo a top offset of -45px and a left offset of 125px.
+3. The logo's absolute position is relative to the browser viewport. Make .card the new positioning context for .logo.*/

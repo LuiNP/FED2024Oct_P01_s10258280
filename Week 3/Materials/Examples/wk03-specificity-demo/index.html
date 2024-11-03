@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Simple Specificity Demo</title>
+  <link href="normalize.css" rel="stylesheet" type="text/css" />
+	<link href="style.css" rel="stylesheet" type="text/css" />
+	<style>
+		section {
+			font-size: 30px;
+			color: orange;
+		}
+
+		* {
+			font-family: Arial, sans-serif;
+			color: lightblue;
+		}
+
+		p {
+			color: green;
+		}
+
+		.example_class {
+			color: black;
+		}
+
+		#example_id {
+			color: purple;
+		}
+    /* stacking of two classes. Last in last out. last in wins  */
+    section p{
+      color: yellow;
+    }
+
+    section p{
+      color: red;
+      color: #000; /* #000000 */
+      /*font-size: 12px !important;*/
+      font-size:12px;
+      font-size: 20px;
+    }
+  /*
+    .blue{
+      color:blue;
+      font-size:12px;
+    }
+    .green{
+      color: green;
+      font-size:40px;
+    }*/
+	</style>
+</head>
+
+<body>
+  <p class="blue green">some paragraph</p>
+	Uncomment the CSS rules to play around and see how specificity affects
+  <p> A paragraph not in a section </p>
+  <article>
+    <p> A paragraph in article </p>
+  </article>
+	<section>
+    --- Start of a section ---
+    <p> A paragraph in section without id & class. </p>
+    <p class="example_class">A paragraph with class.</p>
+    <p id="example_id">A paragraph with id.</p>
+    <p id="example_id" class="example_class">A paragraph with id & class.</p>
+    --- End of a section ---
+	</section>
+</body>
+
+</html>

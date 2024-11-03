@@ -1,0 +1,50 @@
+/* Positioning Styles
+================================ */
+/* You MUST specify a positioning for zindex to work */
+.first {
+	z-index: 10;
+	top: 30px;
+	left: 30px;
+	background: #ff6347;
+}
+.second {
+	z-index: 20;
+	top: 55px;
+  left: 150px;
+	background: #87Ceeb;
+}
+.third {
+	z-index: 30;
+	top: 160px;
+	left: 125px;
+	background: #20b2aa;
+}
+
+/* Page Styles
+================================ */
+
+body {
+	color: #fff;
+	font-family: 'Varela Round', sans-serif;
+	background: #e8e9e9;
+	font-size: 1.25em;
+}
+.container {
+	width: 70%;
+	height: 320px;
+	padding: 1.5em;
+	background: #fff;
+	border-radius: 5px;
+	margin: 30px auto;
+  box-shadow: 0 1.5px 0 0 rgba(0,0,0,0.1);
+  position: relative;
+}
+.container div {
+	width: 160px;
+	height: 160px;
+	border-radius: 3px;
+	text-align: center;	
+	line-height: 160px;
+	position: absolute;
+	opacity: .95;
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Example of CSS z-index Property Animation</title>
+    <style>
+      .container {
+        position: relative;
+      }
+      .container div {
+        width: 150px;
+        height: 150px;
+        padding: 5px;
+        position: absolute; /*we need to define a position to ensure that zindex works proper. absolute, fixed, relative positions */
+        background: #76bf40;
+        border: 1px solid #000;
+        opacity: 0.3;
+      }
+      .container .animated {
+        z-index: 0;
+        background: #ffd700;
+        border: 1px solid #b79b00;
+        opacity: 1;
+        -webkit-animation: test 4s infinite; /* Chrome, Safari, Opera */
+        animation: test 4s infinite;
+      }
+      /* Chrome, Safari, Opera */
+      @-webkit-keyframes test {
+        50% {
+          z-index: 4;
+        }
+      }
+      /* Standard syntax */
+      @keyframes test {
+        50% {
+          z-index: 4;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      <strong>Warning:</strong> CSS Animations do not work in Internet Explorer
+      9 and earlier versions.
+    </p>
+    <p>
+      <strong>Note:</strong> The position of the animated DIV box along the
+      z-axis is animating from its initial value "0" to "4", and back to the
+      initial value "0" again up to infinite times.
+    </p>
+    <p></p>
+    <div class="container">
+      <div class="animated">Animated Box</div>
+      <div style="top: 30px; left: 30px; z-index: 1">z-index 1</div>
+      <div style="top: 60px; left: 60px; z-index: 2">z-index 2</div>
+      <div style="top: 90px; left: 90px; z-index: 3">z-index 3</div>
+    </div>
+
+    <p style="position: relative; top:300px;">
+      Sample code is extract from
+      <a href="https://www.tutorialrepublic.com/codelab.php?topic=css3&file=animate-z-index-property" target="_blank">Tutorial Republic</a>
+    </p>
+  </body>
+</html>
