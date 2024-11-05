@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Background Images with Cover</title>
+	<link href="style.css" rel="stylesheet" type="text/css" />
+	<style>
+		* {
+			font-family: Arial, sans-serif;
+		}
+
+		div {
+			width: 45%;
+			float: left;
+			margin-right: 10px;
+			background-color: gray;
+		}
+
+		.poster {
+			max-width: 100%; /*let it fill to the max width of the container div */
+			height: 400px;
+			/* use random 1024px by 800px photo */
+			background-image: url('https://picsum.photos/1024/800');
+			background-repeat: no-repeat;
+			
+      position: relative; /* just for positioning the heading*/
+
+		}
+
+		.cover {
+			background-size: cover;
+		}
+
+		h2 {
+			background-color: rgba(0, 0, 0, 0.3);
+			position: absolute;
+			top: 0;
+			left: 0;
+			padding: 10px;
+			margin: 0;
+			color: white;
+		}
+	</style>
+</head>
+
+<body>
+	<h1>Testing Background with/without Cover</h1>
+	<div class="poster">
+		<h2>Image with no Cover</h2>
+	</div>
+
+	<div class="poster cover">
+		<h2>Image with Cover</h2>
+	</div>
+
+</body>
+
+</html>

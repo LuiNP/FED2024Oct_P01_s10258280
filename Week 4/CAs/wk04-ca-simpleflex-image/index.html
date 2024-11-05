@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>repl.it</title>
+	<link href="style.css" rel="stylesheet" type="text/css" />
+	<style>
+    body{
+      background:gray;
+    }
+		.container {
+			display: flex;
+			width: 100%;
+			background-color: #fff;
+			flex-wrap: wrap;
+			/*wrap flex items to a new row if not enough space */
+
+		}
+
+		/* flex item of 20% per item */
+		.flex-item {
+			padding: 2%;
+			flex-grow: 1;
+			flex-basis: 15%;
+			/* 15% for borders*/
+
+			display: flex;
+			flex-direction: column;
+			/* so child elements can use flexbox stuff too! */
+			/* switching on borders will force the 5th flex item to move down*/
+			border: 1px solid #D3D3D3;
+
+
+			/* let's set random images if we want to create cover images */
+			/*
+      background-image: url("https://picsum.photos/400/400");
+      background-size: cover;
+      */
+		}
+
+		.flex-img img {
+			max-width: 100%;
+		}
+
+		.flex-info {
+			margin-top: auto;
+		}
+
+		@media (max-width: 920px) {
+			.flex-item {
+				flex: 1 21%;
+			}
+      /* This is a flex shorthand */
+      /* we set 
+        flex-grow: 1; 
+        flex-basis: 21%;
+        Flex shorthand: https://developer.mozilla.org/en-US/docs/Web/CSS/flex
+        Understand flex grow: https://developer.mozilla.org/en-US/docs/Web/CSS/flex-grow
+      */
+		}
+
+    img{
+      width: 400px;
+    }
+
+
+	</style>
+</head>
+
+<body>
+	<section class="container">
+		<div class="flex-item">
+			<div class="flex-img">
+				<img src="https://picsum.photos/400/400">
+      </div>
+      <div class="flex-info">
+        <h4>Some info</h4>
+        <p>Some meaningful info</p>
+      </div>
+		</div>
+    <div class="flex-item">
+       <div class="flex-img">
+        <img src="https://picsum.photos/400/400">
+      </div>
+      <div class="flex-info">
+        <h4>Some info</h4>
+        <p>Some meaningful info</p>
+      </div>
+		</div>
+    <div class="flex-item">
+       <div class="flex-img">
+        <img src="https://picsum.photos/400/400">
+      </div>
+      <div class="flex-info">
+        <h4>Some info</h4>
+        <p>Some meaningful info</p>
+      </div>
+		</div>
+    <div class="flex-item">
+     <div class="flex-img">
+        <img src="https://picsum.photos/400/400">
+      </div>
+      <div class="flex-info">
+        <h4>Some info</h4>
+        <p>Some meaningful info</p>
+      </div>
+		</div>
+    <div class="flex-item">
+      <div class="flex-img">
+        <img src="https://picsum.photos/400/400">
+      </div>
+      <div class="flex-info">
+        <h4>Some info</h4>
+        <p>Some meaningful info</p>
+      </div>
+		</div>
+	</section>
+
+
+</body>
+
+</html>

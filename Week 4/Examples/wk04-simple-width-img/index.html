@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Simple Width Images</title>
+	<link href="style.css" rel="stylesheet" type="text/css" />
+	<style>
+		/* force images to be of certain dimensions*/
+		img {
+			width: 400px;
+			height: 300px;
+		}
+
+		/* forces image to be scalled to 400px max */
+		img.responsive-img-max {
+			max-width: 100%;
+			height: auto;
+		}
+
+		/*
+    You are see that the image quality goes down but it fits nicely up to 600px in width. Resizes nicely when smaller than 600px;
+    */
+		img.responsive-img-max-fixed-width {
+			width: 100%;
+			max-width: 600px;
+			height: auto;
+		}
+	</style>
+</head>
+
+<body>
+	<div>
+		<img class="responsive-img-max" src="https://picsum.photos/400/300" >
+  </div>
+  <div>
+    <img class="responsive-img-max-fixed-width" src="https://picsum.photos/400/300">
+  </div>  
+  </body>
+</html>

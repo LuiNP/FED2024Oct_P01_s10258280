@@ -1,0 +1,2 @@
+Notice how the images scale and resizes according to the screen size
+The cover property allows the image to be contained within the box it is defined. Commonly used for Hero images (in the homepage) and great for scaling to screen sizes, layouts
