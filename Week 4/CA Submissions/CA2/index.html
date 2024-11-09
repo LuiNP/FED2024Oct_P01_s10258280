@@ -8,13 +8,57 @@
       body {
         font-family: Arial, sans-serif;
       }
+      
+      .container {
+        display: flex;
+        flex-direction: column; 
+      }
+
+      .button {
+        display: block;
+        width: 100%; 
+        text-align: center; 
+        padding: 10px; 
+        background-color: green; 
+        color: white; 
+      }
+
+      
+      .split {
+        flex: 1;
+        padding: 10px;
+      }
+
+      
+      @media (min-width: 756px) {
+        .container {
+          flex-direction: row;
+        }
+      }
+
+      @media (max-width: 755px) {
+        .container {
+          flex-direction: column;
+          height: 100vh;
+        }
+
+        .split {
+          width: 100%;
+        }
+
+      }
     </style>
   </head>
 
   <body>
     <section class="container">
       <div class="split">
-        <img src="https://picsum.photos/400/400" />
+        <img
+          src="https://picsum.photos/400/400"
+          srcset="https://picsum.photos/400/400 720w, https://picsum.photos/600/600 721w"
+          sizes="(max-width: 720px) 400px, 600px"
+          alt="Sample image"
+        />
       </div>
       <div class="split">
         <h2>This is a pretty awesome heading</h2>
