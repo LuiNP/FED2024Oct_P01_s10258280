@@ -24,23 +24,24 @@ function Singer(name, specialty, power, hitpoints, level, gender ){
     };
 
     this.singerProfile = function(){
-        console.log(`${this.name} Level ${this.level}, gender ${this.gender}, specialty '${this.specialty}'`,
-        console.log(`Power ${this.calculatePower()}!`),
-        console.log(`Hitpoints: ${this.hpLevel()}`)
-        );
+        return `${this.name} Level ${this.level}, gender ${this.gender}, specialty '${this.specialty}'\n
+    Power ${this.calculatePower()}!\n
+    Hitpoints: ${this.hpLevel()}`;
     }
+    
 }
     
-
-
 
 
 //Create the function objects momobae and minabae.
 let momobae = new Singer("Momobae", "K-Pop", 49, 28, 7, "Female");
 let minibae = new Singer("Momobae", "J-Rock/Fusion", 77, 11, 4, "Female");
 
-
-
+let Singers = [momobae, minibae]
+for (let i = 0; i < Singers.length; i++)
+{
+    console.log(Singers[i].singerProfile())
+}
 
 //create a new element using javascript
 let newDiv1 = document.createElement("div");
