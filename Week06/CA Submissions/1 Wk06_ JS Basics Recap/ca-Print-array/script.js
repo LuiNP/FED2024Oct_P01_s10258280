@@ -1,7 +1,7 @@
 //fill in the missing code in the ???
 
 let a = [1001, 1002, 1003, 1004, 1005];
-for (let i = 0; i < ???; ++i) {
+for (let i = 0; i < 5; ++i) {
   //create a new element using javascript
     let newDiv = document.createElement("div");
     //add class to element through javascript

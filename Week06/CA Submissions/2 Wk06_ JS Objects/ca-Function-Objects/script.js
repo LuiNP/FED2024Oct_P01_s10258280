@@ -1,12 +1,43 @@
 //Fill in the ??? to complete the function object.
 function Singer(name, specialty, power, hitpoints, level, gender ){
-    ???
+    this.name = name;
+    this.specialty = specialty;
+    this.power = power;
+    this.hitpoints = hitpoints;
+    this.level = level;
+    this.gender = gender;
+
+    this.calculatePower = function(){
+        return (this.power*this.level)-this.hitpoints;
+    };
+
+    this.hpLevel = function(){
+        if (this.hitpoints <= 50){
+            return "Weak";
+        }
+        else if (this.hitpoints <=70){
+            return "Strong";
+        }
+        else{
+            return "Amazing";
+        };
+    };
+
+    this.singerProfile = function(){
+        console.log(`${this.name} Level ${this.level}, gender ${this.gender}, specialty '${this.specialty}'`,
+        console.log(`Power ${this.calculatePower()}!`),
+        console.log(`Hitpoints: ${this.hpLevel()}`)
+        );
     }
-    
 }
+    
+
+
+
 
 //Create the function objects momobae and minabae.
-???
+let momobae = new Singer("Momobae", "K-Pop", 49, 28, 7, "Female");
+let minibae = new Singer("Momobae", "J-Rock/Fusion", 77, 11, 4, "Female");
 
 
 

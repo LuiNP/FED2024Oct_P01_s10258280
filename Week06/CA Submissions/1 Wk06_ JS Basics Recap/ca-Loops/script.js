@@ -1,5 +1,5 @@
-for (???) {
-  if (???) {
+for (let i = 10; i>0; i--) {
+  if (i%2==0) {
     //when i is even
     //create a new element using javascript
     let newDiv = document.createElement("div");
