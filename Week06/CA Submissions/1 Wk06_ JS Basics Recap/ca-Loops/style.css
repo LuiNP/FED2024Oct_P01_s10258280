@@ -1,0 +1,17 @@
+.even{
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  background-color: yellow;
+  width: 100px;
+  margin: 10px;
+}
+
+.odd{
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  background-color: red;
+  width: 100px;
+  margin: 10px;
+}

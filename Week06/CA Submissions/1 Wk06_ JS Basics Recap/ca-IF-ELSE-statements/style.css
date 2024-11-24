@@ -1,0 +1,45 @@
+.container{
+  width: 400px;
+  border: 1px solid lightgray;
+  padding: 10px;
+  margin: 0 auto;
+  border-radius: 5px;
+}
+
+#Going{
+  padding: 30px;
+  background-color: red;
+  border-radius: 10px;
+  margin: 10px;
+  text-align: center;
+}
+
+#notGoing{
+  padding: 30px;
+  background-color: red;
+  border-radius: 10px;
+  margin: 10px;
+  text-align: center;
+}
+
+.explanationText{
+  padding: 20px;
+  text-align: center;
+}
+
+.extra{
+  width: 300px;  
+  height: 50px;  
+  padding: 20px;
+  background-color: yellow;
+  border-radius: 10px;
+  margin: 10px;
+  text-align: center;
+}
+
+.btnContainer{
+  display: flex;
+  justify-content: center;
+  
+  
+}
