@@ -1,0 +1,97 @@
+<!-- read more 
+https://www.w3schools.com/js/js_input_examples.asp
+-->
+<!-- https://repl.it/@malcolmyam/wk07-ca-form-obj-localstorage#index.html -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>CA Form Object Local Storage</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <form id="myFrm">
+      <input type="text" placeholder="Enter Name" id="txtName" required />
+      <input
+        type="number"
+        placeholder="Enter Mobile"
+        id="txtMobile"
+        maxlength="8"
+        required
+      />
+      <input type="text" placeholder="Enter Class" id="txtClass" required />
+      <input type="submit" />
+
+      <h1>List of Students</h1>
+      <table id="student-table">
+        <thead>
+          <th>Name</th>
+          <th>Mobile</th>
+          <th>Class</th>
+        </thead>
+        <tbody id="student-table-body"></tbody>
+      </table>
+
+      <script>
+        refreshStudentTable();
+
+        //retrieve form information when submit
+        document.addEventListener("submit", function (event) {
+          //prevent default action of the form from actually submitting
+          event.preventDefault();
+
+          //@TODO
+          //create objects based on object template and form data
+          //
+          //INSERT YOUR CODE HERE :)
+
+          //Get form values
+          let stuName = document.getElementById("txtName").value;
+          let stuMobile = document.getElementById("txtMobile").value;
+          let stuClass = document.getElementById("txtClass").value;
+
+          let studentList = [];
+
+          //retrieve localstorage items
+          if (localStorage.getItem("studentList") !== null) {
+            studentList = JSON.parse(localStorage.getItem("studentList"));
+          }
+          let newStudent = new Student(stuName, stuMobile, stuClass);
+          //create our student and store to localstorage
+          studentList.push(newStudent);
+          localStorage.setItem("studentList", JSON.stringify(studentList));
+
+          //clear the form upon each sumission
+          document.getElementById("myFrm").reset();
+
+          refreshStudentTable();
+        });
+        //@Step 1
+        //create a function based object "template"
+        function Student(stuName, stuMobile, stuClass) {
+          this.id = Date.now();
+          this.name = stuName;
+          this.mobile = stuMobile;
+          this.class = stuClass;
+        }
+
+        //Method to print the list of students from localstorage to output on the html page.
+        function refreshStudentTable() {
+          let studentTable = document.getElementById("student-table-body");
+          let studentList = [];
+          let studentData = "";
+          if (localStorage.getItem("studentList") !== null) {
+            studentList = JSON.parse(localStorage.getItem("studentList"));
+
+            for(let student of studentList){
+                studentData += `<tr><td>${student.name}</td><td>${student.mobile}</td><td>${student.class}</td></tr>`;
+            }
+            studentTable.innerHTML = studentData;
+          }
+        }
+      </script>
+    </form>
+  </body>
+</html>

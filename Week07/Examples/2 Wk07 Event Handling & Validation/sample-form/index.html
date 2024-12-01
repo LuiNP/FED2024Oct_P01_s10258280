@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Week 7 CA Form</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <form id="myFrm">
+    <label for="txtName">Name</label><br />
+    <input type="text" id="txtName" name="txtName"><br /><br />
+    <label for="rdoAnimal">What's your favorite animal</label><br />
+    <input type="radio" name="rdoAnimal" value="Dog">Dog
+    <input type="radio" name="rdoAnimal" value="Cat">Cat
+    <input type="radio" name="rdoAnimal" value="Sharks">Sharks
+    <input type="radio" name="rdoAnimal" value="None">None of the above<br /><br />
+    <label for="selWorld">What's your favorite animal</label><br />
+    <select id="selWorld" name="selWorld">
+      <option>Earth explodes</option>
+      <option>Alien attack</option>
+      <option>Zombie attack</option>
+      <option>Flu pandemic</option>
+    </select><br /><br />
+    <label for="chkColor">Check the colors you like below</label><br />
+    <input type="checkbox" name="chkColor" value="red">Red
+    <input type="checkbox" name="chkColor" value="blue">Blue
+    <input type="checkbox" name="chkColor" value="green">Green
+    <input type="checkbox" name="chkColor" value="pink">Pink<br />
+    <input type="submit" id="btnSubmit" name="btnSubmit">
+  </form>
+  <div>
+    <h1>User options: </h1>
+    <div id="userdetails">
+
+    </div>
+  </div>
+  <script>
+    let btnSubmit = document.getElementById('btnSubmit');
+    let msg = "";
+    //process form 
+    btnSubmit.addEventListener('click', function (e) {
+      e.preventDefault();
+
+      //get name value
+      let userName = document.getElementById('txtName').value;
+      msg += `User Name: ${userName}<br/>`;
+
+      //get radio button
+      let animalList = document.querySelector('input[name="rdoAnimal"]:checked').value;
+      msg += `Fav Animal: ${animalList}<br/>`;
+
+      //get select value
+      let worldEnd = document.getElementById('selWorld').value;
+      msg += `World End: ${worldEnd}<br/>`;
+
+      //get color
+      let chkColor = document.querySelectorAll('input[name="chkColor"]:checked');
+      let colorList = [];
+      for (let color of chkColor) {
+        colorList.push(color.value);
+      }
+      let colors = "";
+      for (let color of colorList) {
+        colors += `${color}`;
+      }
+      msg += `Fav Color: ${colorList}<br/>`;
+      document.getElementById('userdetails').innerHTML = msg;
+    });//end eventListener
+
+  </script>
+</body>
+
+</html>

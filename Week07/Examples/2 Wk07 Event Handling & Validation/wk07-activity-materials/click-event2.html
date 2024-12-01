@@ -1,0 +1,46 @@
+<html>
+
+	<head>
+	    <script type="text/javascript" src="jquery-2.1.0.js"></script>
+		<script type="text/javascript">
+		$(document).ready( function() {
+		  /// click = mousedown + mouseup
+		  /// hover = mouseover + mouseout
+			/*
+		   $("div").hover(
+		    // when mouse over
+		     function() {
+		     $(this).css("background-color", "red");
+
+		   },
+		   // when mouse out
+		   function() {
+		    $(this).css("background-color", "white");
+
+		   } );
+		   */
+
+		   $("div").mouseover( function() {
+		       $(this).css("background-color", "red");
+		   } );
+
+
+		    $("div").mouseout( function() {
+		       $(this).css("background-color", "white");
+		   } );
+
+		});
+
+
+
+		</script>
+
+	</head>
+
+	<body>
+      <div id="anything">Click here</div>
+      <div id="whatever">Click whatever</div>
+
+ 	</body>
+
+</html>

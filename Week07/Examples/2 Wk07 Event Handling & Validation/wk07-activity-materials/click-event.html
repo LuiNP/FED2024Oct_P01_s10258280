@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<script type="text/javascript" src="jquery-2.1.0.js"></script>
+</head>
+<body>
+<script>
+$(function(){
+	//click upon tag
+	$("a").on('click',function(event) {
+		event.preventDefault(); //prevent default link action
+		alert("Link is clicked!");
+	  $(this).css('color', 'red');
+	});
+
+	//click on ID
+	/*
+	$("#result").on('click',function(event) {
+		//event.preventDefault(); //prevent default link action
+		alert("Link is clicked!");
+		$(this).css('color', 'red');
+	});*/
+})
+</script>
+<div id='result'><a href="http://www.google.com">Click me!</a></div>
+</body>
+</html>

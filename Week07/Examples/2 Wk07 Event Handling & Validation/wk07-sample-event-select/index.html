@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>repl.it</title>
+	<link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+	<select name="locations" id='locations'>
+  <option value="north-yishun">Yishun</option>
+  <option value="east-changi">Changi</option>  
+  <option value="west-clementi">Clementi</option>
+</select>
+
+<h1>
+Selected....: <span id='selected'></span>
+</h1>
+
+<select name="multi-locations" id='multi-locations' multiple>
+  <option value="north-yishun">Yishun</option>
+  <option value="east-changi">Changi</option>  
+  <option value="west-clementi">Clementi</option>
+</select>
+
+<h1>Selected....: </h1>
+<ul id='multi-selected'></ul>
+
+
+    <script src="script.js"></script>
+  </body>
+</html>

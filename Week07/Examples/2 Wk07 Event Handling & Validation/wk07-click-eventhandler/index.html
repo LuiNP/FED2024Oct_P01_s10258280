@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+  </head>
+  <body>
+   
+
+    <a href="https://www.np.edu.sg" id="demo-link">Let's go NP</a>
+    <h4>Clicked <span id="click-counter">0</span></h4>
+    <script>
+      let demo = document.getElementById('demo-link');
+      demo.addEventListener('click', function(event){
+        event.preventDefault();//prevent default action of the hyperlink
+        let counterEl = document.getElementById('click-counter');
+
+        //convert to a number value first as the value retrieve is a string
+        let counter = parseInt(counterEl.textContent);
+        counter++;
+        counterEl.textContent = counter;
+
+        console.log(counter);
+      },false);
+
+    </script>
+  </body>
+</html>

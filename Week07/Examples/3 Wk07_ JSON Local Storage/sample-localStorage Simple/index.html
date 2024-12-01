@@ -1,0 +1,48 @@
+<!-- read more 
+https://www.w3schools.com/js/js_input_examples.asp
+-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>repl.it</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <form id="myFrm">
+      <input type="text" placeholder="name" id="txtName" />
+      <input type="submit" />
+    </form>
+    <h1>Name: <span id="myName">...</span></h1>
+    <script>
+      //vanilla JS methods
+      //retrieve form information when submit
+      let myNameEl = document.getElementById("myName");
+      let username = localStorage.getItem("username");
+      if (username != null && username != "") {
+        myNameEl.innerHTML = username;
+      }
+      
+      document.addEventListener("submit", function (event) {
+        //prevent default action of the form from actually submitting
+        event.preventDefault();
+
+        //retrieve form values
+        let myName = document.getElementById("txtName").value;
+        console.log(myName);
+
+        
+        //set the name
+        localStorage.setItem('username',myName);
+
+        document.getElementById("myName").innerHTML = myName;
+        //document.getElementById('myName').textContent = myName;
+
+        //clear the form upon each sumission
+        document.getElementById("myFrm").reset();
+      });
+    </script>
+  </body>
+</html>
