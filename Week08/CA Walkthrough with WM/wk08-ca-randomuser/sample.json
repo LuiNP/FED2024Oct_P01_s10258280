@@ -1,0 +1,66 @@
+{
+  "results": [
+    {
+      "gender": "male",
+      "name": {
+        "title": "Mr",
+        "first": "Elijah",
+        "last": "Hopkins"
+      },
+      "location": {
+        "street": {
+          "number": 7086,
+          "name": "Oak Ridge Ln"
+        },
+        "city": "Lewisville",
+        "state": "Pennsylvania",
+        "country": "United States",
+        "postcode": 31867,
+        "coordinates": {
+          "latitude": "86.6375",
+          "longitude": "-161.4456"
+        },
+        "timezone": {
+          "offset": "-1:00",
+          "description": "Azores, Cape Verde Islands"
+        }
+      },
+      "email": "elijah.hopkins@example.com",
+      "login": {
+        "uuid": "466b97b3-ff75-4696-813f-3deb68fbd04c",
+        "username": "brownwolf299",
+        "password": "aaron",
+        "salt": "87EvzJxW",
+        "md5": "0a501d5ac5b24e95ba217a574ee10db6",
+        "sha1": "e8bd9710dfd3c66a0a771e7b132a199c4219b0cd",
+        "sha256": "f7d4deebd243c3c7e9731108a60de5a251d24e808de145e7b699fb215cf60e86"
+      },
+      "dob": {
+        "date": "1990-08-26T03:32:16.129Z",
+        "age": 30
+      },
+      "registered": {
+        "date": "2018-05-06T06:55:49.164Z",
+        "age": 2
+      },
+      "phone": "(359)-780-2763",
+      "cell": "(028)-172-2995",
+      "id": {
+        "name": "SSN",
+        "value": "868-11-5599"
+      },
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/men/72.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/men/72.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/men/72.jpg"
+      },
+      "nat": "US"
+    }
+  ],
+  "info": {
+    "seed": "d5e317755cb1796a",
+    "results": 1,
+    "page": 1,
+    "version": "1.3"
+  }
+}
