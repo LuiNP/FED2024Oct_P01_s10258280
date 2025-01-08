@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Simple RESTDB</title>
+
+	<link rel="stylesheet" href="/css/bootstrap.min.css">
+	<link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+	<div class="container">
+		<h1>Simple student Form System</h1>
+		<div id="add-update-msg">
+			<div class="alert alert-success" role="alert">
+				student record successfully added
+			</div>
+		</div>
+		<div class="form" id="add-student">
+			<form id="add-student-form">
+				<div class="form-group">
+					<label for="student-name">Name</label>
+            <input type="text" id="student-name" class="form-control" required>
+          </div>
+          <div class="form-group">
+            <label for="student-email">Email</label>
+            <input type="email" id="student-email" class="form-control" required>
+            <small id="student-email-help" class="form-text text-muted">We'll never share your email with anyone else.</small>
+          </div>
+          <div class="form-group">
+            <label for="student-msg">Message</label>
+            <textarea id="student-msg" class="form-control" required>
+            </textarea>
+          </div>
+
+          <input type="submit" value="Send" class="btn btn-primary" id="student-submit">
+      </form>
+    </div>
+  </div><!-- end add container --> 
+
+  <div class="container mt-5">
+    <h2>Table information of students (<span id="total-students"></span>)</h2>
+    <table class="table" id="student-list">
+      <thead>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Message</th>
+        <th colspan="2">Actions</th>
+        
+      </thead>
+      <!-- This will be filled with information later -->
+      <tbody></tbody>
+    </table>
+  </div>
+  
+  <div class="container mt-5" id="update-student-container"> 
+    <div id="add-update-msg">
+			<div class="alert alert-success" role="alert">
+				student record updated sucessfully
+			</div>
+		</div>
+    <h4>Update student</h4>
+    <div class="form" id="update-student">
+			<form id="update-student-form">
+				<div class="form-group">
+					<label for="update-student-name">Name</label>
+          <input type="text" id="update-student-name" class="form-control" required>
+          </div>
+          <div class="form-group">
+          <label for="update-student-email">Email</label>
+          <input type="email" id="update-student-email" class="form-control" required>
+           <small id="update-student-email-help" class="form-text text-muted">We'll never share your email with anyone else.</small>
+          </div>
+          <div class="form-group">
+          <label for="update-student-msg">Message</label>
+          <textarea id="update-student-msg" class="form-control" required>
+          </textarea>
+          <input type="hidden" id="update-student-id">
+          </div>
+
+          <input type="submit" value="Update student Details" class="btn btn-warning" id="update-student-submit">
+        </form>
+    </div>
+  </div>
+<script src="/js/popper.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="script.js"></script>
+  </body>
+</html>
